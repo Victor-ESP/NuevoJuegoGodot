@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://to4nyjt5mhju"
+
+[deps]
+
+files=["res://Princesa/credits/credits.notes.translation", "res://Princesa/credits/credits.authors.translation", "res://Princesa/credits/credits.licenses.translation", "res://Princesa/credits/credits.urls.translation"]
+
+source_file="res://Princesa/credits/credits.csv"
+dest_files=["res://Princesa/credits/credits.notes.translation", "res://Princesa/credits/credits.authors.translation", "res://Princesa/credits/credits.licenses.translation", "res://Princesa/credits/credits.urls.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
