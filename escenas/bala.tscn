@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b554asy4vtgep"]
+
+[ext_resource type="Texture2D" uid="uid://oqtlarkde7fm" path="res://SpritesDeCastillo/stileImportado/full spritesheet.png" id="1_2y4dy"]
+[ext_resource type="Script" uid="uid://c634oa5ka3xbx" path="res://escenas/bala.gd" id="1_66u8n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66u8n"]
+atlas = ExtResource("1_2y4dy")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qn40"]
+atlas = ExtResource("1_2y4dy")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsvbv"]
+atlas = ExtResource("1_2y4dy")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qa18i"]
+atlas = ExtResource("1_2y4dy")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfkbx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66u8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qn40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsvbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qa18i")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e0x3a"]
+radius = 6.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_66u8n"]
+
+[node name="bala" type="Node2D" unique_id=906136809]
+
+[node name="murcielago" type="RigidBody2D" parent="." unique_id=1810498443]
+script = ExtResource("1_66u8n")
+
+[node name="bala" type="AnimatedSprite2D" parent="murcielago" unique_id=2092177448]
+sprite_frames = SubResource("SpriteFrames_lfkbx")
+animation = &"run"
+frame_progress = 0.4649985
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="murcielago" unique_id=1970760091]
+shape = SubResource("CircleShape2D_e0x3a")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="murcielago" unique_id=1142215526]
+libraries/animaciones = SubResource("AnimationLibrary_66u8n")

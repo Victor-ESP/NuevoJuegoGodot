@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dah4i1ht4uhv"]
+
+[ext_resource type="Script" uid="uid://dge3huk6t505j" path="res://aro_de_fuego.gd" id="1_d0kef"]
+[ext_resource type="Texture2D" uid="uid://3wtubbepirgo" path="res://SpritesDeCastillo/stileImportado/props_itens/torch_spritesheet.png" id="1_yfj55"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0kef"]
+atlas = ExtResource("1_yfj55")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1uvst"]
+atlas = ExtResource("1_yfj55")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hukmx"]
+atlas = ExtResource("1_yfj55")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58tw4"]
+atlas = ExtResource("1_yfj55")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewedu"]
+atlas = ExtResource("1_yfj55")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nv7qf"]
+atlas = ExtResource("1_yfj55")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfkbx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0kef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1uvst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hukmx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58tw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewedu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nv7qf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lfkbx"]
+radius = 8.062258
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d0kef"]
+radius = 5.0990195
+
+[node name="aroDeFuego" type="Node2D" unique_id=417256965]
+
+[node name="aroDeFuego" type="RigidBody2D" parent="." unique_id=450069027]
+script = ExtResource("1_d0kef")
+
+[node name="aroDeFuego" type="AnimatedSprite2D" parent="aroDeFuego" unique_id=665211714]
+sprite_frames = SubResource("SpriteFrames_lfkbx")
+frame_progress = 0.87892145
+
+[node name="Area2D" type="Area2D" parent="aroDeFuego/aroDeFuego" unique_id=973296054]
+
+[node name="ColisionArea" type="CollisionShape2D" parent="aroDeFuego/aroDeFuego/Area2D" unique_id=2117433204]
+shape = SubResource("CircleShape2D_lfkbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="aroDeFuego" unique_id=1774477951]
+shape = SubResource("CircleShape2D_d0kef")

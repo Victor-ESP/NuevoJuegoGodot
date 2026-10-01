@@ -245,7 +245,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yl78u")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"die",
 "speed": 5.0
 }, {
@@ -400,7 +400,7 @@ script = ExtResource("1_wsr85")
 [node name="Princesa" type="AnimatedSprite2D" parent="Princesa" unique_id=1372544214]
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_lfkbx")
-animation = &"jump"
+animation = &"die"
 
 [node name="Camera2D" type="Camera2D" parent="Princesa/Princesa" unique_id=400292688]
 position = Vector2(-1, 0)
